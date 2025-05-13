@@ -1,2 +1,8 @@
-﻿  ConsoleApplication2.cpp
-  ConsoleApplication2.vcxproj -> C:\Users\Ahmad\source\repos\ConsoleApplication2\x64\Debug\ConsoleApplication2.exe
+﻿D:\MVS\MVS\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(534,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (ConsoleApplication2.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Basic String Manipulation And Operation.cpp
+C:\Users\Ahmad\source\repos\Basic String Manipulation And Operation\ConsoleApplication2\Basic String Manipulation And Operation.cpp(174,27): warning C4267: '=': conversion from 'size_t' to 'short', possible loss of data
+C:\Users\Ahmad\source\repos\Basic String Manipulation And Operation\ConsoleApplication2\Basic String Manipulation And Operation.cpp(198,27): warning C4267: '=': conversion from 'size_t' to 'short', possible loss of data
+C:\Users\Ahmad\source\repos\Basic String Manipulation And Operation\ConsoleApplication2\Basic String Manipulation And Operation.cpp(235,27): warning C4267: '=': conversion from 'size_t' to 'short', possible loss of data
+C:\Users\Ahmad\source\repos\Basic String Manipulation And Operation\ConsoleApplication2\Basic String Manipulation And Operation.cpp(267,18): warning C4267: 'initializing': conversion from 'size_t' to 'short', possible loss of data
+C:\Users\Ahmad\source\repos\Basic String Manipulation And Operation\ConsoleApplication2\Basic String Manipulation And Operation.cpp(263,1): warning C4715: 'TrimLeft': not all control paths return a value
+  ConsoleApplication2.vcxproj -> C:\Users\Ahmad\source\repos\Basic String Manipulation And Operation\x64\Debug\Basic String Manipulation And Operations.exe
