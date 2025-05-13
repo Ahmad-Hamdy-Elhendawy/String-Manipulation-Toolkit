@@ -5,9 +5,9 @@ using namespace std;
 
 string ReadString()
 {
-    cout << "String: ";
+    cout << "Enter a string: ";
     string str;
-    cin.ignore(); 
+    cin.ignore();
     getline(cin, str);
     return str;
 }
@@ -15,7 +15,7 @@ string ReadString()
 char ReadChar()
 {
     char c;
-    cout << "Char: ";
+    cout << "Enter a character: ";
     cin >> c;
     return c;
 }
@@ -146,13 +146,12 @@ void CountCase(char c, string str, bool CaseSens = true)
         }
     }
     cout << c << " exists " << counter << " times." << endl;
-   
 }
 
 bool IsVowel(char a)
 {
     char c = tolower(a);
-    return  ((c == 'a') ||  (c == 'e') ||  (c == 'u') ||  (c == 'i') ||  (c == 'o'));
+    return  ((c == 'a') || (c == 'e') || (c == 'u') || (c == 'i') || (c == 'o'));
 }
 
 short CountVowel(char c, string str)
@@ -178,16 +177,12 @@ void PrintWords(string str)
         {
             cout << sub << endl;
         }
-
-
         str.erase(0, pos + space.length());
     }
     if (str != "")
     {
         cout << str << endl;
-
     }
-    return;
 }
 
 short CountWords(string str)
@@ -202,14 +197,11 @@ short CountWords(string str)
         {
             count++;
         }
-
-
         str.erase(0, pos + space.length());
     }
     if (str != "")
     {
         count++;
-
     }
     return count;
 }
@@ -238,9 +230,9 @@ vector<string> SplitString(string str, string n)
         if (sword != "")
         {
             vec.push_back(sword);
-        tokens++;
-        str.erase(0, pos + dil.length());
+            tokens++;
         }
+        str.erase(0, pos + dil.length());
     }
 
     if (str != "")
@@ -253,7 +245,6 @@ vector<string> SplitString(string str, string n)
 }
 
 string TrimLeft(string str)
-
 {
     for (short i = 0; i < str.length() - 1; i++)
     {
@@ -268,7 +259,6 @@ string TrimRight(string str)
     {
         if (str[i] != ' ')
             return str.substr(0, i + 1);
-
     }
     return str;
 }
@@ -288,32 +278,26 @@ string Join(vector <string> names, string del = " ")
     return s.substr(0, s.length() - del.length());
 }
 
-
-
-
-
 int main()
 {
-    // str = ReadString();
-    //char c = ReadChar();
+    string str = ReadString();
+    char c = ReadChar();
 
-    vector <string> names = { "ahmad", "mohamed", "Black person" };
-    cout << Join(names, ",");
-
-    //cout << endl;
-    //CountLetter(c, str);
-    //PrintFirstLetter(str);
-
-    //cout << "\nCapitalized first letters:\n" << CapitalizeFirstLetter(str) << endl;
-    //cout << "\nLowercased first letters:\n" << LowerFirstLetter(str) << endl;
-
-    //UpperAll(str);
-    //LowerAll(str);
-    //Invert(str);
-    //CountThemAll(str);
-
-    //CountCase(c, str);
-    //PrintWords(str);
+    CountLetter(c, str);
+    PrintFirstLetter(str);
+    cout << "\nCapitalized first letters:\n" << CapitalizeFirstLetter(str) << endl;
+    cout << "\nLowercased first letters:\n" << LowerFirstLetter(str) << endl;
+    UpperAll(str);
+    LowerAll(str);
+    Invert(str);
+    CountThemAll(str);
+    CountCase(c, str);
+    PrintWords(str);
+    cout << "Word count: " << CountWords(str) << endl;
+    PrintVowels(c, str);
+    vector<string> words = SplitString(str, " ");
+    cout << "\nTrimmed string: " << Trim(str) << endl;
+    cout << "Joined words: " << Join(words) << endl;
 
     return 0;
 }
